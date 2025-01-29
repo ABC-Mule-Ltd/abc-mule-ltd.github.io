@@ -1,66 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!-- Author: @devsha256 [This is temporary landing page]-->
-    <title>ABC Ltd.</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .logo {
-            max-width: 150px; 
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: smaller;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Ltd..</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <h1>Welcome to ABC Ltd.</h1>
-        <img src="avatar.png" alt="ABC Ltd. Logo" class="logo"> 
+    <header class="header">
+        <img src="assets/images/avatar.png" alt="ABC Ltd." class="company-logo">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
+    
     <main>
-        <p>This is the homepage of ABC Ltd., a leading provider of [insert company's products or services here].</p>
-        <p>We are committed to [insert company's mission or values here].</p>
-        <p>Learn more about us and our offerings by exploring our website.</p>
+        <section id="home">
+            <h1>Home</h1>
+            <p>Welcome to ABC Ltd..</p>
+        </section>
+        <section id="about">
+            <h1>About</h1>
+            <p>Learn more about our company.</p>
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+            <p>Explore our MuleSoft and integration projects.</p>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Get in touch with us.</p>
+        </section>
     </main>
-
-    <footer>
-        &copy; 2025 ABC Ltd. All rights reserved.
+    
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> ABC Ltd. All rights reserved.</p>
     </footer>
-
+    
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
